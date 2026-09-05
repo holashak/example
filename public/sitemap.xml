@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://alexmorrow.example/</loc></url>
+  <url><loc>https://alexmorrow.example/journal</loc></url>
+  <url><loc>https://alexmorrow.example/archive</loc></url>
+  <url><loc>https://alexmorrow.example/about</loc></url>
+  <url><loc>https://alexmorrow.example/projects/small-hours</loc></url>
+  <url><loc>https://alexmorrow.example/projects/between-stops</loc></url>
+  <url><loc>https://alexmorrow.example/projects/sunday-rooms</loc></url>
+  <url><loc>https://alexmorrow.example/projects/open-country</loc></url>
+  <url><loc>https://alexmorrow.example/projects/weather-line</loc></url>
+  <url><loc>https://alexmorrow.example/projects/edge-of-water</loc></url>
+  <url><loc>https://alexmorrow.example/journal/on-waiting</loc></url>
+  <url><loc>https://alexmorrow.example/journal/walking-without-a-map</loc></url>
+  <url><loc>https://alexmorrow.example/journal/what-the-weather-leaves-behind</loc></url>
+</urlset>
