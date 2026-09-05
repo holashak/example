@@ -10,6 +10,7 @@ An editorial React portfolio for human/documentary and landscape photography. Ke
 - `src/content/site.ts` is the single typed content source for identity, projects, journal, tags, and archive metadata.
 - `src/main.tsx` contains the route views and shared layout.
 - `public/images/` contains local JPEGs; `public/robots.txt` and `public/sitemap.xml` contain crawl metadata.
+- `.github/workflows/deploy-pages.yml` builds and deploys GitHub Pages from `main`, using `/example/` as the project base path.
 
 ## Commands
 

@@ -22,7 +22,7 @@ export const site = {
   placeholderNote: 'ALEX MORROW is a fictional placeholder identity intended to be replaced.',
 }
 
-const image = (slug: string, n: number, alt: string) => ({ src: `/images/${slug}-${String(n).padStart(2, '0')}.jpg`, alt })
+const image = (slug: string, n: number, alt: string) => ({ src: `${import.meta.env.BASE_URL}images/${slug}-${String(n).padStart(2, '0')}.jpg`, alt })
 
 export const projects: Project[] = [
   {

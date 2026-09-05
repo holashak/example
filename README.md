@@ -49,4 +49,4 @@ The app includes a skip link, semantic landmarks, visible keyboard focus, an acc
 
 ## Deployment and Git workflow
 
-Build with `npm run build`, then deploy the generated `dist/` directory to any static host configured for SPA fallback. Work on a `codex/` feature branch, review `git diff`, stage only task files, run lint/build, commit with a focused message, and push with upstream tracking. Never force-push or commit credentials.
+The repository includes `.github/workflows/deploy-pages.yml`. Enable GitHub Pages in repository Settings → Pages with **GitHub Actions** as the source; every push to `main` builds and deploys `dist/` automatically. The workflow sets the `/example/` base path and copies `index.html` to `404.html` so client-side routes remain usable on refresh. For another static host, run `npm run build` and deploy `dist/` with SPA fallback; set `VITE_BASE=/` if it is served at a domain root. Work on a `codex/` feature branch, review `git diff`, stage only task files, run lint/build, commit with a focused message, and push with upstream tracking. Never force-push or commit credentials.
