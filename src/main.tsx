@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Link, NavLink, Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { archive, journal, projects, site, type Project } from './content/site'
 import './styles.css'
@@ -8,7 +9,7 @@ function Seo({ title = site.title, description = site.description }: { title?: s
   return null
 }
 
-function ScrollToTop() { const { pathname } = useLocation(); useEffect(() => window.scrollTo(0, 0), [pathname]); return null }
+function ScrollToTop() { const { pathname } = useLocation(); useEffect(() => { window.scrollTo(0, 0) }, [pathname]); return null }
 
 function Navigation({ onClose }: { onClose?: () => void }) {
   return <nav aria-label="Primary navigation" className="primary-nav">{['Portfolio', 'Journal', 'Archive', 'About'].map((label) => <NavLink key={label} onClick={onClose} to={label === 'Portfolio' ? '/' : `/${label.toLowerCase()}`} className={({ isActive }) => isActive ? 'active' : ''}>{label}</NavLink>)}</nav>
@@ -43,3 +44,5 @@ function NotFound() { return <><Seo title={`Not found — ${site.name}`} /><sect
 function App() { const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'; return <BrowserRouter basename={basename}><ScrollToTop /><Layout><Routes><Route path="/" element={<Home />} /><Route path="/projects/:slug" element={<ProjectPage />} /><Route path="/journal" element={<Journal />} /><Route path="/journal/:slug" element={<JournalPage />} /><Route path="/archive" element={<Archive />} /><Route path="/about" element={<About />} /><Route path="*" element={<NotFound />} /></Routes></Layout></BrowserRouter> }
 
 export default App
+
+createRoot(document.getElementById('root')!).render(<App />)
